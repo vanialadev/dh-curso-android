@@ -21,6 +21,9 @@ fun main() {
     if (pesoDePeixes > 50){
         println("Excedeu " + excesso + "Kg")
         println("Valor da multa R\$ %.2f".format(multa))
+    } else {
+        println("Sem excesso!")
     }
 
+    println("Total de kgs pesacados: $pesoDePeixes")
 }
