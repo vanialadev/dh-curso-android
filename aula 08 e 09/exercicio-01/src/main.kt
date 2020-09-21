@@ -1,0 +1,52 @@
+fun main() {
+
+    val contaCorrente = ContaCorrente(123, 2.00, 1.00)
+    val contaPoupanca = ContaPoupanca(456, 0.00, 100.00)
+
+    val relatorio = Relatorio()
+
+    contaCorrente.depositar(100.0)
+    contaCorrente.sacar(50.00)
+    println("------------------------------------------------------")
+    contaPoupanca.depositar(100.00)
+    contaPoupanca.sacar(205.00)
+    println("------------------------------------------------------")
+    contaPoupanca.transferir(50.00, contaCorrente)
+    println("------------------------------------------------------")
+    contaCorrente.transferir(102.00, contaPoupanca)
+    println("------------------------------------------------------")
+    relatorio.gerarRelatorio(contaCorrente)
+    println("------------------------------------------------------")
+    relatorio.gerarRelatorio(contaPoupanca)
+    println("------------------------------------------------------")
+    println("------------------------------------------------------")
+    println("------------------------------------------------------")
+    println("Banco Array")
+
+    val banco = Banco()
+
+    banco.inserir(contaCorrente)
+    banco.inserir(contaPoupanca)
+    println("------------------------------------------------------")
+    banco.mostrarDados()
+    println("------------------------------------------------------")
+    banco.remover(contaCorrente)
+    println("------------------------------------------------------")
+    banco.mostrarDados()
+    println("------------------------------------------------------")
+    val contaBusca = banco.procurarConta(456)
+    relatorio.gerarRelatorio(contaBusca!!)
+    println("------------------------------------------------------")
+//    contaPoupanca2.depositar(5.00)
+//    contaCorrente2.depositar(5.00)
+
+//    contaPoupanca2.sacar(5.00)
+//    contaCorrente2.sacar(5.00)
+
+//    println("---------------")
+//    println("---------------")
+//    relatorio.gerarRelatorio(contaPoupanca2)
+//    println("---------------")
+//    relatorio.gerarRelatorio(contaCorrente2)
+//    println("---------------")
+}
