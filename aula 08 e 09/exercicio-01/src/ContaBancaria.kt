@@ -14,14 +14,31 @@ abstract class ContaBancaria(
         println("Saldo da conta é R$ %.2f".format(saldo))
     }
 
-    fun transferir(valorTransferencia: Double, destino: ContaBancaria) {
-        val saldoContaOrigem = saldo
-
-        if (sacar(valorTransferencia) && destino.depositar(valorTransferencia)) {
+    fun transferir(valorTransferencia: Double, destino: ContaBancaria?) {
+        if (sacar(valorTransferencia) && destino!!.depositar(valorTransferencia)) {
             println("Transferência realizada.")
         } else {
-            saldo = saldoContaOrigem
             println("Não foi possível realizar a transferência")
         }
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as ContaBancaria
+
+        if (numeroDaConta != other.numeroDaConta) return false
+        if (saldo != other.saldo) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = numeroDaConta
+        result = 31 * result + saldo.hashCode()
+        return result
+    }
+
+
 }

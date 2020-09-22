@@ -37,16 +37,4 @@ fun main() {
     val contaBusca = banco.procurarConta(456)
     relatorio.gerarRelatorio(contaBusca!!)
     println("------------------------------------------------------")
-//    contaPoupanca2.depositar(5.00)
-//    contaCorrente2.depositar(5.00)
-
-//    contaPoupanca2.sacar(5.00)
-//    contaCorrente2.sacar(5.00)
-
-//    println("---------------")
-//    println("---------------")
-//    relatorio.gerarRelatorio(contaPoupanca2)
-//    println("---------------")
-//    relatorio.gerarRelatorio(contaCorrente2)
-//    println("---------------")
 }

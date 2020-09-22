@@ -1,6 +1,6 @@
-class ContaCorrente(conta: Int,
+class ContaCorrente(numeroDaConta: Int,
                     saldo: Double,
-                    private val taxaDeOperacao: Double) : ContaBancaria(conta, saldo) {
+                    private val taxaDeOperacao: Double) : ContaBancaria(numeroDaConta, saldo) {
 
     override fun sacar(valorSaque: Double): Boolean {
         val valorTotalDoSaque = valorSaque + taxaDeOperacao

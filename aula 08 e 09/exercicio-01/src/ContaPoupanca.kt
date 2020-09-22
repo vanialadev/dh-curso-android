@@ -1,6 +1,6 @@
-class ContaPoupanca(conta: Int,
+class ContaPoupanca(numeroDaConta: Int,
                     saldo: Double,
-                    private val limite: Double) : ContaBancaria(conta, saldo) {
+                    private val limite: Double) : ContaBancaria(numeroDaConta, saldo) {
 
     override fun sacar(valorSaque: Double): Boolean {
         val valorTotalSaque = saldo + limite
@@ -24,4 +24,5 @@ class ContaPoupanca(conta: Int,
         super.mostrarDados()
         println("Limite: $limite")
     }
+
 }

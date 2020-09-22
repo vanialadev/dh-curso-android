@@ -1,13 +1,13 @@
 class Banco: Imprimivel {
 
-    private val contas = ArrayList<ContaBancaria>()
+    private val contas = arrayListOf<ContaBancaria>()
 
     fun inserir(conta: ContaBancaria) {
         contas.add(conta)
         println("Conta adicionada!")
     }
 
-    fun remover(conta: ContaBancaria) {
+    fun remover(conta: ContaBancaria?) {
         contas.remove(conta)
         println("Conta removida!")
     }
@@ -17,6 +17,7 @@ class Banco: Imprimivel {
             if (conta.numeroDaConta == numeroConta) {
                 return conta
             }
+            contas.contains(conta)
         }
         return null
     }
