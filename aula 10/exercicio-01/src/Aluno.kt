@@ -1,9 +1,12 @@
-class Aluno(private val ra: String,private val nome:String,private  val sobenome:String) {
+class Aluno(
+        nome: String,
+        registro: String,
+        val sobrenome: String,
+) : Pessoa(nome, registro) {
 
-    val podeAzssistirAula: Boolean = true
+    override val podeFazerLicao: Boolean
+        get() = true
 
-
-    val podeFazerLicaoCasa: Boolean
+    override val podeAssistirAula: Boolean
         get() = true
 }
-

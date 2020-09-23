@@ -1,2 +1,2 @@
-class Materia(val nome: String) {}
+class Materia(val nome: String)
 

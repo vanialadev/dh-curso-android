@@ -1,12 +1,8 @@
-class Professor(val nome: String, val rd: String) {
+class Professor(nome: String, registro: String): Pessoa(nome, registro) {
 
+    override val podeDarAula: Boolean
+        get() = true
 
-    fun darAulas() {
-
-    }
-    fun fazerChamada() {
-
-    }
+    override val podeFazerChamada: Boolean
+        get() = true
 }
-
-
